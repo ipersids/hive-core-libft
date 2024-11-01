@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:11:27 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:45:21 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:24:10 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 	size_t	i;
 
-	if (!big || !little)
-		return (0);
 	if (*little == '\0')
 		return ((char *)(big));
 	little_len = ft_strlen(little);
