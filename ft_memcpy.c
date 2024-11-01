@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:01:00 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:43:41 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:42:26 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	*ft_memcpy(void *destination, const void *source, size_t num)
 	dest = destination;
 	src = source;
 	i = 0;
-	if (num == 0 || destination == source)
+	if (num == 0)
 		return (destination);
 	while (i < num)
 	{
