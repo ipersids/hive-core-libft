@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:08:05 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:44:38 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:25:06 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ char	*ft_strrchr(const char *str, int ch)
 
 	i = 0;
 	res = 0;
-	if (!str)
-		return (0);
 	while (str[i] != '\0')
 	{
 		if (str[i] == ch)
