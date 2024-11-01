@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:07:19 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:44:48 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:54:59 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
  * but it is internally converted back to char for the comparison.
  * @return char* A pointer to the first occurrence of character in str.
  * If the character is not found, the function returns a null pointer.
+ * 
+ * @note If the input `str` is a NULL pointer, the function will cause 
+ * 		 a segfault like the original one.
  */
 char	*ft_strchr(const char *str, int ch)
 {
@@ -28,8 +31,6 @@ char	*ft_strchr(const char *str, int ch)
 	char			*res;
 
 	i = 0;
-	if (!str)
-		return (0);
 	while (str[i] != '\0')
 	{
 		if (str[i] == ch)
