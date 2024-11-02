@@ -1,4 +1,12 @@
+<div align="center">
+<picture>
+  <img alt="Libft with bonus" src="https://github.com/ayogun/42-project-badges/blob/main/badges/libftm.png" />
+</picture>
+  
 # Libft static C library
+
+</div>
+
 The Libft project is an essential part of the [Hive Helsinki (42 School Network)](https://www.hive.fi/en/curriculum) core curriculum that involves recreating a custom C library from scratch. It focuses on implementing fundamental functions from the standard C library and not only, such as memory manipulation, string operations, and linked list management.  
 
 The project helps develop a deep understanding of low-level programming, memory management, and efficient coding practices, forming a strong foundation for future projects in systems programming and algorithm optimization.  
