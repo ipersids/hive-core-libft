@@ -6,15 +6,15 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2024/10/30 19:28:36 by ipersids         ###   ########.fr        #
+#    Updated: 2024/11/23 18:51:25 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Compilation variables
-CC			= gcc
+CC			= clang
 CFLAGS		= -Wall -Wextra -Werror
 AR 			= ar
-ARFLAGS 	= -rvcs
+ARFLAGS 	= -rcs
 
 # Platform-specific settings
 ifeq ($(OS),Windows_NT)
@@ -29,8 +29,7 @@ endif
 
 # File names
 NAME		:= libft$(LIB_EXT)
-# SRCS		:= $(shell find . -type f -name 'ft_*.c' ! -name 'ft_lst*.c')
-# SRCS_BONUS	:= $(shell find . -type f -name 'ft_lst*.c')
+# SRCS		:= $(shell find . -type f -name 'ft_*.c')
 
 SRCS		:= 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 				ft_isascii.c ft_isdigit.c ft_isprint.c ft_isprint.c \
@@ -40,13 +39,11 @@ SRCS		:= 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 				ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c \
 				ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 				ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
-				ft_toupper.c
-SRCS_BONUS	:= 	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c \
-				ft_lstclear_bonus.c ft_lstdelone_bonus.c \
-				ft_lstiter_bonus.c ft_lstlast_bonus.c ft_lstmap_bonus.c \
-				ft_lstnew_bonus.c ft_lstsize_bonus.c
+				ft_toupper.c ft_lstadd_back.c ft_lstadd_front.c \
+				ft_lstclear.c ft_lstdelone.c \
+				ft_lstiter.c ft_lstlast.c ft_lstmap.c \
+				ft_lstnew.c ft_lstsize.c
 OBJS		:= $(SRCS:%.c=%.o)
-OBJS_BONUS	:= $(SRCS_BONUS:%.c=%.o)
 
 
 
@@ -55,34 +52,26 @@ all: $(NAME)
 
 # Create the static library
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $@ $(OBJS)
-	@echo "\nLibrary $(NAME) created.\n"
+	@$(AR) $(ARFLAGS) $@ $(OBJS)
+	@echo "\n\033[1;30;42mLibrary $(NAME) created.\033[0m\n"
 
 # Compile source files into object files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Compiled $< into $@"
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "Compiled\t \033[036m$@\033[0m using $(CC) compiler and $(CFLAGS) flags."
 
 # Clean up object files
 clean:
-	@$(RM) -f *.o .bonus_flag
+	@$(RM) -f *.o
 	@echo "Cleaned up object files."
 
 fclean:
-	@$(RM) -f *.o .bonus_flag  $(NAME)
+	@$(RM) -f *.o  $(NAME)
 	@echo "Cleaned up object and executable files."
 
 # Clean up object files and their directory
 re: fclean all
-	@echo "Cleaned up objects + executable and rebuilded library."
-
-# Compile bonus and add in an arhive 
-bonus: .bonus_flag all 
-
-.bonus_flag : ${OBJS_BONUS}
-	$(AR) $(ARFLAGS) $(NAME) $(OBJS_BONUS)
-	touch .bonus_flag
-	@echo "\nBonus is added to the $(NAME) library.\n"
+	@echo "\nCleaning and rebuilding process done.\n"
 
 # Phony targets
 .PHONY: all clean re bonus fclean
