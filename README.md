@@ -124,6 +124,12 @@ sfml-playground/
 ### Installation  
 To use this library in your project, follow these steps:  
 1. **Clone the Repository.**  
+  - To clone the version of the code that was originally used for submission, use the submission tag:  
+```sh
+git clone --branch submission --single-branch --depth 1 https://github.com/ipersids/42-libft.git
+cd 42-libft
+```
+  - To clone the most recent version of the library (the latest commit), use:  
 ```sh
 git clone https://github.com/ipersids/42-libft.git
 cd 42-libft
