@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:16:01 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:47:03 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/06 12:51:03 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		s1++;
 	start = s1;
 	if (*s1 == '\0')
-	{
-		res = (char *) ft_calloc(1, sizeof(char));
-		if (!res)
-			return (0);
-		return (res);
-	}
+		return ((char *) ft_calloc(1, sizeof(char)));
 	end = s1 + ft_strlen(s1) - 1;
 	while (start < end && ft_strchr(set, *end))
 		end--;
