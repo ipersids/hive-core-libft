@@ -182,8 +182,8 @@ make all
 ```
 Commands:   
 - `make all` will build a static library.  
-- `make clean' will remove all `.o' files from the directory.  
-- `make fclean' will remove all `.o' and executable files.  
+- `make clean` will remove all '.o' files from the directory.  
+- `make fclean` will remove all '.o' and executable files.  
 - `make re` will trigger the `fclean` command and rebuild the library.
 
 3. **Include the Header File** in your source code.
