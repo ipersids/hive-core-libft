@@ -191,15 +191,15 @@ Commands:
 #include "libft.h"
 ```
 4. **Include the Library in the Project.**  
-Link the static library in your project's build process to use the functions as described in the header file. For example, if using `gcc`, you can compile and link your project with the library as follows:
+Link the static library in your project's build process to use the functions as described in the header file. For example, if using `clang`, you can compile and link your project with the library as follows:
 ```sh
-gcc -I<folder_path> -o program_name program_name.c -L<lib_path> -lft
+clang -o program_name program_name.c -I<lib_path/include> -L<lib_path> -lft
 
 ```  
 Flags and arguments:    
-- `-I<folder_path>` tells the compiler to look in the specified directory for any header files included in the source code.   
 - `-o program_name` is the name of the output file.  
 - `program_name.c` is the name of the source file to be compiled.   
+- `-I<lib_path/include>` tells the compiler to look in the specified directory for library header file.   
 - `-L<lib_path>` tells the linker to look in the specified directory for any libraries specified with the `-l` option.  
 - `-lft` tells the linker to link the program with the `libft.a` library (the lib prefix and the `.a` extension are automatically added by the linker).  
 
