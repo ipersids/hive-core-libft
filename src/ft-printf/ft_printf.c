@@ -6,14 +6,18 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 23:33:28 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/06 13:09:46 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/06 14:24:20 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* --------------------- Support function prototypes ----------------------- */
+
 static short int	format_is_valid(const char *format);
 static const char	*print_content(va_list *args, const char *f, size_t *len);
+
+/* ------------------------------ ft_printf -------------------------------- */
 
 /**
  * @brief Print formatted data to stdout.
@@ -63,10 +67,7 @@ int	ft_printf(const char *format, ...)
 	return (len);
 }
 
-		// %[flags][width][.precision][length]specifier
-		// 1. Search for %
-		// 4. Check specifier
-		// 5. Print content or return -1 if error
+/* ------------------- Support Function Implementation --------------------- */
 
 static short int	format_is_valid(const char *format)
 {

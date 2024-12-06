@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:24:08 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/06 13:41:02 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/06 14:25:00 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	*get_line_from_buffer(char *buf, char *nl);
 static char	*get_line_from_stream(char *temp_buf, char *buf, int fd, char *nl);
 static char	*join_safe(char *allocated_str, char *static_buf, char *nl);
 
-/* ---------------------------- Implementation ----------------------------- */
+/* ---------------------------- get_next_line ------------------------------ */
 
 /**
  * @brief Get the next line from the file descriptor.
@@ -60,6 +60,8 @@ char	*get_next_line(int fd, t_bool reset)
 		return (NULL);
 	return (get_line_from_stream(temp_buf, buf, fd, nl));
 }
+
+/* ------------------- Support Function Implementation --------------------- */
 
 static char	*get_line_from_buffer(char *buf, char *nl)
 {

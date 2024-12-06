@@ -6,15 +6,9 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2024/11/23 18:51:25 by ipersids         ###   ########.fr        #
+#    Updated: 2024/12/06 14:37:52 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# Compilation variables
-CC			= clang
-CFLAGS		= -Wall -Wextra -Werror
-AR 			= ar
-ARFLAGS 	= -rcs
 
 # Platform-specific settings
 ifeq ($(OS),Windows_NT)
@@ -27,25 +21,42 @@ else
     LIB_EXT = .a
 endif
 
-# File names
+# Library file
 NAME		:= libft$(LIB_EXT)
-# SRCS		:= $(shell find . -type f -name 'ft_*.c')
 
-SRCS		:= 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
-				ft_isascii.c ft_isdigit.c ft_isprint.c ft_isprint.c \
-				ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \
-				ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
-				ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c \
-				ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c \
-				ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
-				ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
-				ft_toupper.c ft_lstadd_back.c ft_lstadd_front.c \
-				ft_lstclear.c ft_lstdelone.c \
-				ft_lstiter.c ft_lstlast.c ft_lstmap.c \
-				ft_lstnew.c ft_lstsize.c
+# Compilation variables
+CC			= clang
+CFLAGS		= -Wall -Wextra -Werror
+HDRS		= -Iinclude
+AR 			= ar
+ARFLAGS 	= -rcs
+
+# Files
+SRCS		:= src/char/ft_isalnum.c src/char/ft_isalpha.c src/char/ft_isascii.c \
+			   src/char/ft_isdigit.c src/char/ft_isprint.c src/char/ft_isspace.c \
+			   src/char/ft_tolower.c src/char/ft_toupper.c \
+			   src/get-next-line/get_next_line.c \
+			   \
+			   src/ft-printf/ft_printf.c src/ft-printf/ft_putchar_fd.c \
+			   src/ft-printf/ft_puthex_fd.c src/ft-printf/ft_puthex_fd.c \
+			   src/ft-printf/ft_putnbr_fd.c src/ft-printf/ft_putptr_fd.c \
+			   src/ft-printf/ft_putstr_fd.c src/ft-printf/ft_putunmb_fd.c \
+			   \
+			   src/linked-list/ft_lstadd_back.c src/linked-list/ft_lstadd_front.c \
+			   src/linked-list/ft_lstlast.c src/linked-list/ft_lstsize.c \
+			   \
+			   src/mem-allocation/ft_calloc.c src/mem-allocation/ft_realloc.c \
+			   \
+			   src/memory/ft_memchr.c src/memory/ft_memcmp.c src/memory/ft_memcpy.c \
+			   src/memory/ft_memmove.c src/memory/ft_memset.c \
+			   \
+			   src/number/ft_atoi.c src/number/ft_itoa.c \
+			   \
+			   src/string/ft_split.c src/string/ft_strchr.c src/string/ft_strdup.c \
+			   src/string/ft_strjoin.c src/string/ft_strlcat.c src/string/ft_strlcpy.c \
+			   src/string/ft_strlen.c src/string/ft_strncmp.c src/string/ft_strnstr.c \
+			   src/string/ft_strrchr.c src/string/ft_strtrim.c src/string/ft_substr.c
 OBJS		:= $(SRCS:%.c=%.o)
-
-
 
 # Targets
 all: $(NAME)
@@ -57,17 +68,17 @@ $(NAME): $(OBJS)
 
 # Compile source files into object files
 %.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(HDRS) -c $< -o $@
 	@echo "Compiled\t \033[036m$@\033[0m using $(CC) compiler and $(CFLAGS) flags."
 
 # Clean up object files
 clean:
-	@$(RM) -f *.o
+	@$(RM) -f $(OBJS)
 	@echo "Cleaned up object files."
 
-fclean:
-	@$(RM) -f *.o  $(NAME)
-	@echo "Cleaned up object and executable files."
+fclean: clean
+	@$(RM) -f $(NAME)
+	@echo "Cleaned up executable file."
 
 # Clean up object files and their directory
 re: fclean all
