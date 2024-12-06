@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_puthex_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 18:59:42 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:43:33 by ipersids         ###   ########.fr       */
+/*   Created: 2024/11/13 16:55:24 by ipersids          #+#    #+#             */
+/*   Updated: 2024/12/06 13:09:43 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Place n zero-valued bytes in the area pointed to by s.
- * 
- * LEGACY: Because the memset() function is preferred over bzero function, 
- * this replica simply reuse ft_memset(s, '\0', n) inside.
- * 
- * ! If `s` point to null, the result is a segmentation error.
- * 
- * @param s pointer to the memory block.
- * @param n numbers of bytes to be written
- */
-void	ft_bzero(void *s, size_t n)
+size_t	ft_puthex_fd(unsigned int n, int fd, short int is_uppercase)
 {
-	ft_memset(s, '\0', n);
+	char	*base;
+	size_t	len;
+
+	if (is_uppercase)
+		base = "0123456789ABCDEF";
+	else
+		base = "0123456789abcdef";
+	len = 0;
+	if (n > 15)
+		len += ft_puthex_fd(n / 16, fd, is_uppercase);
+	len += write(fd, &base[n % 16], 1);
+	return (len);
 }

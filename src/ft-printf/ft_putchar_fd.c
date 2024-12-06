@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:20:03 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:47:31 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/06 13:09:44 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
  * 
  * @param c The character to output.
  * @param fd The file descriptor to which the character is written.
+ * 
+ * @return size_t Number of characters that are written.
  */
-void	ft_putchar_fd(char c, int fd)
+size_t	ft_putchar_fd(char c, int fd)
 {
-	if (fd < 0)
-		return ;
-	write(fd, &c, 1);
+	return (write(fd, &c, 1));
 }
