@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:24:08 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/06 14:25:00 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/06 19:21:48 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*get_next_line(int fd, t_bool reset)
 
 	if (fd < 0 || fd > OPEN_MAX)
 		return (NULL);
-	if (true == reset)
+	if (TRUE == reset)
 	{
 		buffer[fd][0] = '\0';
 		return (NULL);
