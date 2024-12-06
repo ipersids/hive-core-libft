@@ -1,45 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putunmb_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:21:53 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:47:49 by ipersids         ###   ########.fr       */
+/*   Created: 2024/11/13 16:03:33 by ipersids          #+#    #+#             */
+/*   Updated: 2024/12/06 13:09:35 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * @brief Outputs an integer to the specified file descriptor.
+ * @brief Outputs an unsigned integer to the specified file descriptor.
  * 
- * This function writes the integer `n` to the given file descriptor `fd`.
+ * This function writes the unsigned integer `n` 
+ * to the given file descriptor `fd`.
  * 
- * @param n The integer to output.
+ * @param n The unsigned integer to output.
  * @param fd The file descriptor to which the integer is written.
+ * 
+ * @return size_t Number of characters that are written.
  */
-void	ft_putnbr_fd(int n, int fd)
+size_t	ft_putunbr_fd(unsigned int n, int fd)
 {
 	char	ch;
+	size_t	len;
 
-	if (fd < 0)
-		return ;
+	len = 0;
 	ch = '0';
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		if (n == -2147483648)
-		{
-			write(fd, "2", 1);
-			n = 147483648;
-		}
-		else
-			n = n * (-1);
-	}
 	if (n > 9)
-		ft_putnbr_fd(n / 10, fd);
+		len += ft_putunbr_fd(n / 10, fd);
 	ch = ch + (n % 10);
-	write(fd, &ch, 1);
+	len += write(fd, &ch, 1);
+	return (len);
 }

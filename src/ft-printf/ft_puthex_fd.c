@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_puthex_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 19:20:36 by ipersids          #+#    #+#             */
-/*   Updated: 2024/10/30 14:47:40 by ipersids         ###   ########.fr       */
+/*   Created: 2024/11/13 16:55:24 by ipersids          #+#    #+#             */
+/*   Updated: 2024/12/06 13:09:43 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Outputs a string to the specified file descriptor.
- * 
- * This function writes the string `s` to the given file descriptor `fd`.
- * 
- * @param s The string to output.
- * @param fd The file descriptor to which the string is written.
- */
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_puthex_fd(unsigned int n, int fd, short int is_uppercase)
 {
-	if (!s || fd < 0)
-		return ;
-	write(fd, s, ft_strlen(s));
+	char	*base;
+	size_t	len;
+
+	if (is_uppercase)
+		base = "0123456789ABCDEF";
+	else
+		base = "0123456789abcdef";
+	len = 0;
+	if (n > 15)
+		len += ft_puthex_fd(n / 16, fd, is_uppercase);
+	len += write(fd, &base[n % 16], 1);
+	return (len);
 }
