@@ -6,7 +6,7 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2024/12/06 14:37:52 by ipersids         ###   ########.fr        #
+#    Updated: 2024/12/06 14:46:06 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,15 +74,15 @@ $(NAME): $(OBJS)
 # Clean up object files
 clean:
 	@$(RM) -f $(OBJS)
-	@echo "Cleaned up object files."
+	@echo "Cleaned the object files."
 
 fclean: clean
 	@$(RM) -f $(NAME)
-	@echo "Cleaned up executable file."
+	@echo "Cleaned the executable file."
 
 # Clean up object files and their directory
 re: fclean all
-	@echo "\nCleaning and rebuilding process done.\n"
+	@echo "\nCleaning and rebuilding process completed.\n"
 
 # Phony targets
 .PHONY: all clean re bonus fclean
