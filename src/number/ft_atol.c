@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 12:45:02 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/17 14:02:06 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/17 15:53:13 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ long int	ft_atol(const char *str)
 		res += (*str - '0');
 		str++;
 	}
-	res = (int)(res * is_negative);
+	res = (long int)(res * is_negative);
 	return (res);
 }
