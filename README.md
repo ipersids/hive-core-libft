@@ -68,6 +68,7 @@ Functions for handling and processing strings.
 | Function        | Description                                           |
 | :--------------: | ----------------------------------------------------- |
 | `ft_atoi`        | Converts a string to an integer.                     |
+| `ft_atol`        | Converts a string to a long integer.                 |
 | `ft_itoa`        | Converts an integer to a string.                    |
 
 </details>

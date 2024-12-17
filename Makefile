@@ -6,7 +6,7 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2024/12/06 14:46:06 by ipersids         ###   ########.fr        #
+#    Updated: 2024/12/17 14:07:04 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ SRCS		:= src/char/ft_isalnum.c src/char/ft_isalpha.c src/char/ft_isascii.c \
 			   src/memory/ft_memchr.c src/memory/ft_memcmp.c src/memory/ft_memcpy.c \
 			   src/memory/ft_memmove.c src/memory/ft_memset.c \
 			   \
-			   src/number/ft_atoi.c src/number/ft_itoa.c \
+			   src/number/ft_atoi.c src/number/ft_itoa.c src/number/ft_atol.c \
 			   \
 			   src/string/ft_split.c src/string/ft_strchr.c src/string/ft_strdup.c \
 			   src/string/ft_strjoin.c src/string/ft_strlcat.c src/string/ft_strlcpy.c \
