@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:28:38 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/17 14:10:51 by ipersids         ###   ########.fr       */
+/*   Updated: 2024/12/20 10:39:28 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -130,6 +130,11 @@ int			ft_isprint(int ch);
 int			ft_toupper(int ch);
 int			ft_tolower(int ch);
 int			ft_isspace(int ch);
+
+/* ------------------------ Mathematical Functions ------------------------- */
+
+int			ft_min(int n1, int n2);
+int			ft_max(int n1, int n2);
 
 /* ------------------------- Linked List Functions ------------------------- */
 

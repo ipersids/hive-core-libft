@@ -129,6 +129,17 @@ Function reads the content of the file descriptor one line at a time.
 
 </details>
 
+<details> 
+<summary><b>Mathematical functions</b></summary>  
+Function reads the content of the file descriptor one line at a time.  
+
+| Function         | Description                                          |
+| :--------------: | ---------------------------------------------------- |
+|     `ft_min`     |  Returns the minimum of two integers.                |
+|     `ft_max`     |  Returns the maximum of two integers.                |
+
+</details>
+
 ## Project Structure  
 Below is an overview of the project's directory structure. The project is currently ongoing, and this information will be updated as development progresses.   
 
