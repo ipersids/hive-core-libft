@@ -6,14 +6,14 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:28:38 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/20 10:39:28 by ipersids         ###   ########.fr       */
+/*   Updated: 2025/01/04 15:14:34 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>		// malloc(), free(), NULL macros
+# include <stdlib.h>		// malloc(), free(), NULL macros, RAND_MAX
 # include <unistd.h>		// read(), sysconf(_SC_OPEN_MAX) = 1024
 # include <limits.h>		// Limits to manage BUFFER_SIZE
 # include <stdarg.h>		// va_list, va_start, and va_end
@@ -135,6 +135,8 @@ int			ft_isspace(int ch);
 
 int			ft_min(int n1, int n2);
 int			ft_max(int n1, int n2);
+int			ft_rand(void);
+int			ft_abc(int num);
 
 /* ------------------------- Linked List Functions ------------------------- */
 

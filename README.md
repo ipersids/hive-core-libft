@@ -137,6 +137,8 @@ Function reads the content of the file descriptor one line at a time.
 | :--------------: | ---------------------------------------------------- |
 |     `ft_min`     |  Returns the minimum of two integers.                |
 |     `ft_max`     |  Returns the maximum of two integers.                |
+|     `ft_rand`    |  Returns the pseudo-random unsigned integer value.   |
+|     `ft_abc`     |  Returns the absolute value of the input integer.    |
 
 </details>
 
@@ -157,6 +159,8 @@ hive-core-libft/
 │   ├── src/get-next-line/
 │   │   └── *.c
 │   ├── src/linked-list/
+│   │   └── *.c
+│   ├── src/math/
 │   │   └── *.c
 │   ├── src/mem-allocation/
 │   │   └── *.c

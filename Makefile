@@ -6,7 +6,7 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2024/12/20 10:43:57 by ipersids         ###   ########.fr        #
+#    Updated: 2025/01/04 15:14:49 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,9 @@ SRCS		:= src/char/ft_isalnum.c src/char/ft_isalpha.c src/char/ft_isascii.c \
 			   src/string/ft_strlen.c src/string/ft_strncmp.c src/string/ft_strnstr.c \
 			   src/string/ft_strrchr.c src/string/ft_strtrim.c src/string/ft_substr.c \
 			   \
-			   src/math/ft_max.c src/math/ft_min.c
+			   src/math/ft_max.c src/math/ft_min.c src/math/ft_rand.c \
+			   src/math/ft_abc.c
+			   
 OBJS		:= $(SRCS:%.c=%.o)
 
 # Targets
