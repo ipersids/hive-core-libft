@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:28:38 by ipersids          #+#    #+#             */
-/*   Updated: 2025/01/04 15:14:34 by ipersids         ###   ########.fr       */
+/*   Updated: 2025/01/18 14:16:45 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ void		*ft_realloc(void *ptr, size_t old_size, size_t new_size);
 
 size_t		ft_strlen(const char *s);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int			ft_strcmp(const char *s1, const char *s2);
 size_t		ft_strlcpy(char *dest, const char *src, size_t size);
 size_t		ft_strlcat(char *dest, const char *src, size_t size);
 char		*ft_strchr(const char *str, int ch);

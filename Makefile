@@ -6,7 +6,7 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2025/01/04 15:14:49 by ipersids         ###   ########.fr        #
+#    Updated: 2025/01/18 14:17:05 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCS		:= src/char/ft_isalnum.c src/char/ft_isalpha.c src/char/ft_isascii.c \
 			   src/string/ft_strjoin.c src/string/ft_strlcat.c src/string/ft_strlcpy.c \
 			   src/string/ft_strlen.c src/string/ft_strncmp.c src/string/ft_strnstr.c \
 			   src/string/ft_strrchr.c src/string/ft_strtrim.c src/string/ft_substr.c \
+			   src/string/ft_strcmp.c \
 			   \
 			   src/math/ft_max.c src/math/ft_min.c src/math/ft_rand.c \
 			   src/math/ft_abc.c

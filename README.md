@@ -54,6 +54,7 @@ Functions for handling and processing strings.
 | `ft_strlcpy`     | Copies a string with size limit.                    |
 | `ft_strlen`      | Returns the length of a string.                     |
 | `ft_strncmp`     | Compares n bytes of two strings.                    |
+| `ft_strcmp`     | Compares two strings.                    |
 | `ft_strnstr`     | Finds the first occurrence of a substring in a string. |
 | `ft_strrchr`     | Locates the last occurrence of a character in a string. |
 | `ft_split`       | Splits a string into an array of substrings.        |
