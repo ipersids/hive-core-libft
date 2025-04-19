@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:28:38 by ipersids          #+#    #+#             */
-/*   Updated: 2025/01/18 14:16:45 by ipersids         ###   ########.fr       */
+/*   Updated: 2025/04/20 01:32:10 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ size_t		ft_puthex_fd(unsigned int n, int fd, short int is_uppercase);
 size_t		ft_putptr_fd(unsigned long long n, int fd);
 size_t		ft_putchar_fd(char c, int fd);
 size_t		ft_putnbr_fd(int n, int fd);
-size_t		ft_putstr_fd(char *s, int fd);
+size_t		ft_putstr_fd(const char *s, int fd);
 
 /* ---------------------- Memory Management Functions ---------------------- */
 

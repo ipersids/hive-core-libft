@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 19:20:36 by ipersids          #+#    #+#             */
-/*   Updated: 2024/12/06 13:09:37 by ipersids         ###   ########.fr       */
+/*   Updated: 2025/04/20 01:31:23 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
  * 
  * @return size_t Number of characters that are written.
  */
-size_t	ft_putstr_fd(char *s, int fd)
+size_t	ft_putstr_fd(const char *s, int fd)
 {
 	size_t	len;
 
