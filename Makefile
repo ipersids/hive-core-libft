@@ -6,7 +6,7 @@
 #    By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/28 18:42:50 by ipersids          #+#    #+#              #
-#    Updated: 2025/01/18 14:17:05 by ipersids         ###   ########.fr        #
+#    Updated: 2025/04/22 13:54:20 by ipersids         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,15 +42,13 @@ SRCS		:= src/char/ft_isalnum.c src/char/ft_isalpha.c src/char/ft_isascii.c \
 			   src/ft-printf/ft_putnbr_fd.c src/ft-printf/ft_putptr_fd.c \
 			   src/ft-printf/ft_putstr_fd.c src/ft-printf/ft_putunmb_fd.c \
 			   \
-			   src/linked-list/ft_lstadd_back.c src/linked-list/ft_lstadd_front.c \
-			   src/linked-list/ft_lstlast.c src/linked-list/ft_lstsize.c \
-			   \
 			   src/mem-allocation/ft_calloc.c src/mem-allocation/ft_realloc.c \
 			   \
 			   src/memory/ft_memchr.c src/memory/ft_memcmp.c src/memory/ft_memcpy.c \
 			   src/memory/ft_memmove.c src/memory/ft_memset.c \
 			   \
 			   src/number/ft_atoi.c src/number/ft_itoa.c src/number/ft_atol.c \
+			   src/number/ft_strtod.c \
 			   \
 			   src/string/ft_split.c src/string/ft_strchr.c src/string/ft_strdup.c \
 			   src/string/ft_strjoin.c src/string/ft_strlcat.c src/string/ft_strlcpy.c \
@@ -59,7 +57,7 @@ SRCS		:= src/char/ft_isalnum.c src/char/ft_isalpha.c src/char/ft_isascii.c \
 			   src/string/ft_strcmp.c \
 			   \
 			   src/math/ft_max.c src/math/ft_min.c src/math/ft_rand.c \
-			   src/math/ft_abc.c
+			   src/math/ft_abc.c src/math/ft_binary_exponentiation.c
 			   
 OBJS		:= $(SRCS:%.c=%.o)
 

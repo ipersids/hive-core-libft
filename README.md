@@ -71,6 +71,7 @@ Functions for handling and processing strings.
 | `ft_atoi`        | Converts a string to an integer.                     |
 | `ft_atol`        | Converts a string to a long integer.                 |
 | `ft_itoa`        | Converts an integer to a string.                    |
+| `ft_strtod`      | Converts a string to a double-precision floating-point number. |  
 
 </details>
 
@@ -88,19 +89,6 @@ Functions for character testing and conversion.
 | `ft_isspace`     | Checks if a character is a standard white-space character. |
 | `ft_toupper`     | Converts a character to uppercase.                  |
 | `ft_tolower`     | Converts a character to lowercase.                  |
-
-</details>
-
-<details>
-<summary><b>Linked List Functions</b></summary>  
-Functions for managing linked lists (requires a special definition of the list `t_list`).    
-
-| Function         | Description                                         |
-| :--------------: | --------------------------------------------------- |
-| `ft_lstadd_back` | Adds a new element at the end of the list.          |
-| `ft_lstadd_front`| Adds a new element at the beginning of the list.    |
-| `ft_lstlast`     | Returns the last element of the list.               |
-| `ft_lstsize`     | Returns the number of elements in the list.         |
 
 </details>
 
@@ -140,6 +128,7 @@ Function reads the content of the file descriptor one line at a time.
 |     `ft_max`     |  Returns the maximum of two integers.                |
 |     `ft_rand`    |  Returns the pseudo-random unsigned integer value.   |
 |     `ft_abc`     |  Returns the absolute value of the input integer.    |
+| `ft_binary_exponentiation` | Computes the power of a number using exponentiation by squaring. |  
 
 </details>
 

@@ -6,7 +6,7 @@
 /*   By: ipersids <ipersids@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 11:28:38 by ipersids          #+#    #+#             */
-/*   Updated: 2025/04/20 01:32:10 by ipersids         ###   ########.fr       */
+/*   Updated: 2025/04/22 13:54:37 by ipersids         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,8 +114,11 @@ char		*ft_strdup(const char *str);
 
 /* --------------------- Number Manipulation Functions --------------------- */
 
+# define MAX_EXPONENT 511	// Largest possible base 10 exponent.
+
 int			ft_atoi(const char *str);
 long int	ft_atol(const char *str);
+double		ft_strtod(const char *str, char **endptr);
 
 // using memory allocation:
 
@@ -138,23 +141,6 @@ int			ft_min(int n1, int n2);
 int			ft_max(int n1, int n2);
 int			ft_rand(void);
 int			ft_abc(int num);
-
-/* ------------------------- Linked List Functions ------------------------- */
-
-# ifndef T_LIST
-#  define T_LIST
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-# endif
-
-void		ft_lstadd_front(t_list **lst, t_list *new);
-int			ft_lstsize(t_list *lst);
-t_list		*ft_lstlast(t_list *lst);
-void		ft_lstadd_back(t_list **lst, t_list *new);
+double		ft_binary_exponentiation(double base, int exponent);
 
 #endif
